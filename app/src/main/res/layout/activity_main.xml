@@ -23,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/UsernameID"
+        android:contentDescription="@string/todo"
         app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:ignore="ImageContrastCheck,ImageContrastCheck"
-        android:contentDescription="@string/todo" />
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <RelativeLayout
         android:id="@+id/profile_stats"
@@ -48,6 +48,7 @@
         android:layout_below="@id/ProfilePicID"
         android:text="@string/NameOfPerson"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/black"
         android:textSize="15sp" />
 
     <TextView
@@ -89,6 +90,7 @@
         android:layout_below="@id/EditProfileButtonID">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </RelativeLayout>
