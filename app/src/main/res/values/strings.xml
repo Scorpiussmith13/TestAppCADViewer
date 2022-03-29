@@ -5,4 +5,12 @@
     <string name="Username">Hisagi Amage</string>
     <string name="NameOfPerson">Ashutosh Das</string>
     <string name="ProfileStat">100</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email_or_phone">Email or Phone Number</string>
+    <string name="password">Password</string>
+    <string name="todo">TODO</string>
+    <string name="friend_request">Friend request</string>
 </resources>

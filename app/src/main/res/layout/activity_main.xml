@@ -4,25 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
-
-    <ImageButton
-        android:id="@+id/FriendRequestID"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/AboutID"
-        android:layout_alignEnd="@+id/EditProfileButtonID"
-        android:layout_alignParentEnd="true"
-        app:srcCompat="@android:drawable/btn_plus" />
 
     <TextView
         android:id="@+id/UsernameID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Username"
+        android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ProfilePicID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/UsernameID"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+    <RelativeLayout
+        android:id="@+id/profile_stats"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UsernameID"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/ProfilePicID"
+        android:paddingTop="20dp">
+
+        <include layout="@layout/top_profile"></include>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/NameOfPersonID"
@@ -32,25 +48,8 @@
         android:layout_below="@id/ProfilePicID"
         android:text="@string/NameOfPerson"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/black"
         android:textSize="15sp" />
-
-    <ImageView
-        android:id="@+id/ProfilePicID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/UsernameID"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/ProfileStatID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/UsernameID"
-
-        android:layout_alignRight="@+id/ProfilePicID"
-        android:layout_alignParentEnd="true"
-        android:text="@string/ProfileStat"
-        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/AboutID"
@@ -61,9 +60,20 @@
         android:maxLength="100"
 
         android:text="@string/About"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-        <!--android:singleLine="true"-->
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black" />
+    <!--android:singleLine="true"-->
 
+
+    <ImageButton
+        android:id="@+id/FriendRequestID"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/AboutID"
+        android:layout_alignEnd="@+id/EditProfileButtonID"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/friend_request"
+        app:srcCompat="@android:drawable/btn_plus" />
 
     <Button
         android:id="@+id/EditProfileButtonID"
@@ -73,6 +83,17 @@
         android:text="@string/EditProfileButton"
 
         android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EditProfileButtonID">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 </RelativeLayout>
 
 
