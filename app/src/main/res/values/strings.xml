@@ -13,4 +13,9 @@
     <string name="password">Password</string>
     <string name="todo">TODO</string>
     <string name="friend_request">Friend request</string>
+    <string name="get_started_now_it_s_free">Get started now --- It\'s free!</string>
+    <string name="recruiter">Recruiter</string>
+    <string name="student">Student</string>
+    <string name="Continue">Continue</string>
+    <string name="already_on_demo">Already on demo?</string>
 </resources>

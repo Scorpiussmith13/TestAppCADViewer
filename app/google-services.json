@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "565078053718",
+    "project_id": "testappcadviewer",
+    "storage_bucket": "testappcadviewer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565078053718:android:18fed2481679dcaee0bcf7",
+        "android_client_info": {
+          "package_name": "com.example.testappcadviewer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565078053718-u33onmj4hmrfgl7gmj1mboad84ok4o2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.testappcadviewer",
+            "certificate_hash": "f03848306ba5e86f4acff918650e2b977968858f"
+          }
+        },
+        {
+          "client_id": "565078053718-j2q5f2jjo54tj4k40du522hg72s8fahq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK7623SUEsF6aS7D_e0Xn_zs9XL85H_zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565078053718-j2q5f2jjo54tj4k40du522hg72s8fahq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
