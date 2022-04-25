@@ -7,6 +7,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class JoinActivity:AppCompatActivity() {
     lateinit var textView: TextView
@@ -15,7 +17,8 @@ class JoinActivity:AppCompatActivity() {
     lateinit var registerPassword:EditText
     lateinit var studentRegister:RadioButton
     lateinit var recruiterRegister:RadioButton
-
+    private lateinit var firebaseDatabase: DatabaseReference
+lateinit var s:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.join_layout)
@@ -26,6 +29,8 @@ class JoinActivity:AppCompatActivity() {
         registerPassword=findViewById(R.id.registerPassword)
         studentRegister=findViewById(R.id.studentRegister)
         recruiterRegister=findViewById(R.id.recruiterRegister)
+        firebaseDatabase= FirebaseDatabase.getInstance().getReferenceFromUrl("\n" +
+                "https://testappcadviewer-default-rtdb.firebaseio.com/")//creating the realtime database of firebase instance
 
         textView.setOnClickListener()
         {
@@ -55,13 +60,13 @@ class JoinActivity:AppCompatActivity() {
                     val email: String = registerEmail.text.toString().trim { it <= ' ' }
                     val password: String = registerPassword.text.toString().trim { it <= ' ' }
 
-                    if(studentRegister.isChecked)
+                    if(studentRegister.isChecked)// if the registered user is a student
                     {
-                        val s:String=studentRegister.getText().toString()
+                         s=studentRegister.text.toString()
                         //Toast.makeText(this,s,Toast.LENGTH_SHORT).show()
                     }
-                    else {
-                        val s: String = recruiterRegister.getText().toString()
+                    else {// if the registered user is a recruiter
+                        s = recruiterRegister.text.toString()
                         //Toast.makeText(this,s,Toast.LENGTH_SHORT).show()
                     }
 
@@ -69,6 +74,9 @@ class JoinActivity:AppCompatActivity() {
                         // If the registration is successfully done
                         if (task.isSuccessful) {
                             //Firebase registered user
+                                //val user =users(registerEmail.text.toString(),registerPassword.text.toString())
+                            firebaseDatabase.child("Users").child(s).child("Email").setValue(email)
+                            firebaseDatabase.child("Users").child(s).child("Password").setValue(password)
                             val firebaseUser: FirebaseUser = task.result!!.user!!
                             Toast.makeText(
                                 this,
