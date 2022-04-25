@@ -21,4 +21,5 @@
     <string name="Company_Name">Gensler</string>
     <string name="Company_about_motto">Our people-centered, “People First” culture and “One Firm-Firm” motto promotes integrated teams that unite to shape the future of cities.</string>
     <string name="view_profiles_by_company">View</string>
+    <string name="post_button">POST</string>
 </resources>
