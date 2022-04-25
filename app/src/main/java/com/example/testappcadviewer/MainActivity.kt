@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         dataList.add(dataModel(R.drawable.profilepicture))
         dataList.add(dataModel(R.drawable.profilepicture))
         dataList.add(dataModel(R.drawable.profilepicture))
-        dataList.add(dataModel(R.drawable.profilepicture))
+    
         photoAdapter.setDataList(dataList)
 
 
