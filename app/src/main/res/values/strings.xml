@@ -22,4 +22,11 @@
     <string name="Company_about_motto">Our people-centered, “People First” culture and “One Firm-Firm” motto promotes integrated teams that unite to shape the future of cities.</string>
     <string name="view_profiles_by_company">View</string>
     <string name="post_button">POST</string>
+    <string name="update_profile_information">Update Profile Information</string>
+    <string name="first_name_edit_profile">Name</string>
+    <string name="email_ET">Email</string>
+    <string name="update_profile_btn">Update Profile</string>
+    <string name="username_EditProfile">Username</string>
+    <string name="phone_number_editprof">Phone Number</string>
+    <string name="about_editprofile">About</string>
 </resources>
