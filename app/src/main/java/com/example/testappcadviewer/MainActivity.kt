@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var postButton:Button
     lateinit var recyclerView: RecyclerView
     lateinit var photoAdapter: PhotoAdapter
+    lateinit var editProfileBtn: Button
      private var dataList=mutableListOf<dataModel>()
     companion object{
         val IMAGE_REQUEST_CODE= 100
@@ -24,10 +25,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         postButton=findViewById(R.id.PostButton)
         recyclerView=findViewById(R.id.recyclerView)
+        editProfileBtn=findViewById(R.id.EditProfileButtonID)
         recyclerView.layoutManager=GridLayoutManager(applicationContext,3)
         photoAdapter= PhotoAdapter(applicationContext)
         recyclerView.adapter=photoAdapter
         postButton.setOnClickListener { pickImage() }
+        editProfileBtn.setOnClickListener(){
+            goToEditProfile()
+        }
+
         dataList.add(dataModel(R.drawable.profilepicture))
         dataList.add(dataModel(R.drawable.profilepicture))
         dataList.add(dataModel(R.drawable.profilepicture))
@@ -40,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         dataList.add(dataModel(R.drawable.profilepicture))
         photoAdapter.setDataList(dataList)
 
+    }
+    private fun goToEditProfile(){
+    val intent2 = Intent(this,EditProfile::class.java)
+        startActivity(intent2)
 
     }
     private fun pickImage()
